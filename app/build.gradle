@@ -31,8 +31,8 @@ android {
             java.srcDir('src/li/java')
             res.srcDir('src/li/res')
 
-            // assets.srcDir('src/li/assets')
-            // manifest.srcFile('src/li/AndroidManifest.xml')
+//             assets.srcDir('src/li/assets')
+//             manifest.srcFile('src/li/AndroidManifest.xml')
         }
 
         zhang {
@@ -44,28 +44,25 @@ android {
         }
     }
 
-    signingConfigs {
-
-        // 只是用来做演示，没有特地生成签名文件
-
-        li {
-            storeFile file("src/li/liKeystore.jks")
-            storePassword "li123"
-            keyAlias "li"
-            keyPassword "li1234"
-
-            // 开启 V2 签名
-            v2SigningEnabled true
-        }
-
-        zhang {
-            storeFile file("src/zhang/liKeystore.jks")
-            storePassword "zhang123"
-            keyAlias "zhang"
-            keyPassword "zhang1234"
-            v2SigningEnabled true
-        }
-    }
+//    signingConfigs {
+//        // 只是用来做演示，没有特地生成签名文件
+//        li {
+//            storeFile file("src/li/liKeystore.jks")
+//            storePassword "li123"
+//            keyAlias "li"
+//            keyPassword "li1234"
+//
+//            // 开启 V2 签名
+//            v2SigningEnabled true
+//        }
+//        zhang {
+//            storeFile file("src/zhang/liKeystore.jks")
+//            storePassword "zhang123"
+//            keyAlias "zhang"
+//            keyPassword "zhang1234"
+//            v2SigningEnabled true
+//        }
+//    }
 
     productFlavors {
         li {
@@ -74,7 +71,7 @@ android {
             dimension "app"
             versionName "1.0.2"
 
-            signingConfig signingConfigs.li
+//            signingConfig signingConfigs.li
 
         }
 
@@ -84,7 +81,7 @@ android {
             dimension "app"
             versionName "1.0"
 
-            signingConfig signingConfigs.zhang
+//            signingConfig signingConfigs.zhang
 
             manifestPlaceholders = [
                     MOB_APPKEY   : "202c38fasdccb5b", // ShareSDK的key
